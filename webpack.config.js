@@ -6,7 +6,7 @@
     const CSSExtract = new MiniCssExtractPlugin({filename: 'styles.css'})
 
      return {
-        'entry': './src/_app.js',
+        'entry': './src/app.js',
         'output': {
             'path': path.join(__dirname, 'public'),
             'filename': 'bundle.js'
@@ -19,7 +19,12 @@
             },{
                 test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {
