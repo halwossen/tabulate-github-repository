@@ -2,15 +2,29 @@
 
 const repositoriesReducerDefaultState = {
     currentPage: 0,
-    repositoriesPerPage: 5,
-    repositories: []
+    repositoriesPerPage: 20,
+    repositories: [],
+    didInvalidate: false,
+    isFetching: false,
 };
 
 export default (state = repositoriesReducerDefaultState, action) => {
     switch(action.type) {
-        case 'LOAD_REPOSITORIES':
+        case 'MAKE_REQUEST':
             return {
                 ...state,
+                isFetching: true,
+            }
+        case 'INVALIDATE_REQUEST':
+            return {
+                ...state,
+                didInvalidate: true,
+                isFetching: false
+            }
+        case 'RECEIVED_REQUEST':
+            return {
+                ...state,
+                isFetching: false,
                 repositories: action.repositories
             }
         case 'NEXT_PAGE':

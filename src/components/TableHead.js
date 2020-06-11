@@ -12,4 +12,5 @@ const TableHead = () => (
     </thead>
 );
 
+
 export default TableHead;

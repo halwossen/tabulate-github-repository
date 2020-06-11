@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import _AppRouter from './routers/_AppRouter';
+import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import fetchRepositories from './api/githubRepositoriesApi';
+import { startFetchingRepositories } from './actions/repositories';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 
 const store = configureStore();
 
-fetchRepositories(store.dispatch)
+startFetchingRepositories(store.dispatch);
 
 const jsx = (
     <Provider store={store}>
-        <_AppRouter />
+        <AppRouter />
     </Provider>
 );
 

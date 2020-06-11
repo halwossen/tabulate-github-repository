@@ -7,8 +7,9 @@ export default () => {
     const store = createStore(
         combineReducers({
             filters: filtersReducer,
-            repositories: repositoriesReducer
+            repositoryData: repositoriesReducer
         })
     );
     return store;
 }
+ 
