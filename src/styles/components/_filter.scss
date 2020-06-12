@@ -1,13 +1,10 @@
-.search-field {
-    border: 0.1rem solid #ced4da;
-    border-radius: 0.25rem;
-    margin-left: $s-size;
-    padding: 0.6rem;
+#filter {
+    background: none;
+    padding: 0;
+    
 }
 
-.sort-dropdown {
-    background-color: $header;
-    border: none;
-    margin-left: $s-size;
-    padding: 0.7rem;
+.form-control {
+    font-size: 18px;
+    text-align: center;
 }

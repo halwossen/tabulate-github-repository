@@ -3,7 +3,7 @@
 const repositoriesReducerDefaultState = {
     currentPage: 0,
     repositoriesPerPage: 20,
-    repositories: [],
+    repositories: [{id: '', description: '', updated_at: undefined, created_at: undefined}],
     didInvalidate: false,
     isFetching: false,
 };

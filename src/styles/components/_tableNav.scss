@@ -1,0 +1,30 @@
+
+.table-nav-firs-half, .table-nav-second-half {
+    padding-top: $m-size;
+    margin-bottom: $s-size;
+}
+
+.table-nav-element {
+    background: $header;
+    display: flex;
+    justify-content: center;
+    margin-right: $s-size;
+    padding: 0;
+    text-align: center;
+}
+
+.page-display, .previous-page, .next-page, .sort, .refresh-page {
+    background-color: rgba(86,61,124,.15);
+    display: block;
+    border: none;
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.sort {
+    border: none;
+}
+
+#refresh {
+    margin-right: 0;
+}
