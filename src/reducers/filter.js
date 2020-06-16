@@ -3,6 +3,8 @@
 const filterReducerDefaultState = {
     text: '',
     sortBy: 'date_updated',
+    sortIndex: 1,
+    sortClassName: 'sorting_asc',
     dateUpdate: undefined,
     dateCreated: undefined,
 }
@@ -14,15 +16,12 @@ export default (state = filterReducerDefaultState, action) => {
                 ...state,
                 text: action.text
             }
-        case 'SORT_BY_DATE_UPDATED':
+        case 'SET_SORT_PARAM':
             return {
                 ...state,
-                sortBy: 'date_updated'
-            }
-        case 'SORT_BY_DATE_CREATED':
-            return {
-                ...state,
-                sortBy: 'date_created'
+                sortIndex: -1 * state.sortIndex,
+                sortBy: action.sortBy,
+                sortClassName: state.sortIndex === 1 ? 'sorting_asc' : 'sorting_desc'
             }
         default:
             return state

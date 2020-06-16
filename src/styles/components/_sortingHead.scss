@@ -1,0 +1,37 @@
+
+table.repositoryTable thead th.sorting,
+table.repositoryTable thead th.sorting_asc,
+table.repositoryTable thead th.sorting_desc {
+    cursor: pointer;
+    font-weight: 400;
+    padding-right: 3rem;
+    position: relative;
+}
+
+table.repositoryTable thead .sorting:before, 
+table.repositoryTable thead .sorting_asc:before, 
+table.repositoryTable thead .sorting_desc:before {
+    right: 1.5rem;
+    content: "\2191";
+    position: absolute;
+}
+
+table.repositoryTable thead .sorting:after, 
+table.repositoryTable thead .sorting_asc:after, 
+table.repositoryTable thead .sorting_desc:after {
+    right: 0.5rem;
+    content: "\2193";
+    position: absolute;
+}
+
+table.repositoryTable thead .sorting:before,
+table.repositoryTable thead .sorting:after,
+table.repositoryTable thead .sorting_asc:after,
+table.repositoryTable thead .sorting_desc:before  {
+    opacity: 0.3
+}
+
+table.repositoryTable thead .sorting_asc:before,
+table.repositoryTable thead .sorting_desc:after  {
+    opacity: 1
+}

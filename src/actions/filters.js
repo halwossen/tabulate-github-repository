@@ -7,27 +7,12 @@ export const setTextFilter = (text = '') => (
     }
 );
 
-// SORT_BY_NAME
+// SET_SORT_PARAMETER
 
-export const sortByName = () => (
+export const setSortParam = (sortBy) => (
     {
-        type: 'SORT_BY_NAME'
-    }
-);
-
-// SORT_BY_DATE_UPDATED
-
-export const sortByDateUpdated = () => (
-    {
-        type: 'SORT_BY_DATE_UPDATED'
-    }
-);
-
-// SORT_BY_DATE_CREATED
-
-export const sortByDateCreated = () => (
-    {
-        type: 'SORT_BY_DATE_CREATED'
+        type: 'SET_SORT_PARAM',
+        sortBy
     }
 );
 

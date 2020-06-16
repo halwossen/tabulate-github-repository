@@ -4,31 +4,27 @@ import PageDisplay from './PageDisplay';
 import PreviousPage from './PreviousPage';
 import NextPage from './NextPage';
 import Filter from './Filter';
-import Sort from './Sort';
 import RefreshPage from './RefreshPage';
 
 const TableNav = ({dispatch, isFetching, didInvalidate, repositories, filters}) => (
     <div className="row">
-        <div className="col-12 col-md-4 table-nav-firs-half">
+        <div className="col-12 col-md-4 table-nav-first-half">
             <div className="row">
-                <div className="col table-nav-element">
+                <div className="col table-nav-element" id="page-display">
                     <PageDisplay isFetching={isFetching} didInvalidate={didInvalidate} repositories={repositories}/>
                 </div>
                 <div className="col table-nav-element">
                     <PreviousPage dispatch={dispatch} isFetching={isFetching} didInvalidate={didInvalidate} repositories={repositories}/>
                  </div>
-                 <div className="col table-nav-element">
+                 <div className="col table-nav-element" id="next">
                     <NextPage dispatch={dispatch} isFetching={isFetching} didInvalidate={didInvalidate} repositories={repositories}/>
                 </div>
             </div>
         </div>
-        <div className="col-12 col-md-8 table-nav-firs-half">
+        <div className="col-12 col-md-8 table-nav-second-half">
             <div className="row">
-                <div className="col-6 col-md-6 table-nav-element" id="filter">
+                <div className="col-8 col-md-8 table-nav-element" id="filter">
                     <Filter dispatch={dispatch} isFetching={isFetching} didInvalidate={didInvalidate} filters={filters}/>
-                </div>
-                <div className="col col-md table-nav-element">
-                    <Sort dispatch={dispatch} isFetching={isFetching} didInvalidate={didInvalidate} filters={filters}/>
                 </div>
                 <div className="col col-md table-nav-element" id="refresh">
                     <RefreshPage dispatch={dispatch} isFetching={isFetching} didInvalidate={didInvalidate}/>

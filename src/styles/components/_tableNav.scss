@@ -1,6 +1,6 @@
 
-.table-nav-firs-half, .table-nav-second-half {
-    padding-top: $m-size;
+.table-nav-first-half, .table-nav-second-half{
+    margin-top: $m-size;
     margin-bottom: $s-size;
 }
 
@@ -17,7 +17,7 @@
     background-color: rgba(86,61,124,.15);
     display: block;
     border: none;
-    padding: 0.7rem;
+    padding: 0.9rem;
     width: 100%;
 }
 
@@ -25,6 +25,6 @@
     border: none;
 }
 
-#refresh {
+#refresh{
     margin-right: 0;
 }
